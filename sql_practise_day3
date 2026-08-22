@@ -1,0 +1,17 @@
+/*
+SELECT first_name,last_name,gender FROM patients Where gender = 'M';
+SELECT first_name,last_name FROM patients Where allergies is null;
+SELECT first_name FROM patients Where first_name like "C%";
+select first_name,last_name from patients where weight >=100 and weight<=120;
+update patients set allergies = 'NKA' WHERE allergies is null;
+select concat(first_name,' ',last_name) from patients;
+select (first_name ||' '|| last_name) as Full_Name from patients;
+select first_name,last_name,province_name from patients p join province_names pn on p.province_id = pn.province_id;
+select count(patient_id) from patients where year(birth_date) = 2010;
+select first_name,last_name,height from patients  where height = (select max(height) from patients);
+select * from  patients where patient_id in (1,45,534,879,1000);
+select count(*) AS total_admissions from admissions;
+select * from admissions where admission_date = discharge_date;
+select patient_id,count(patient_id) AS total_admissions from admissions where patient_id = 579;
+SELECT DISTINCT city AS unique_cities FROM patients WHERE province_id = 'NS'; 
+*/ 
